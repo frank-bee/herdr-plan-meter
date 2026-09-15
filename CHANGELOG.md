@@ -1,0 +1,15 @@
+# Changelog
+
+All notable changes to this project are documented here. The project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.1.0] - 2026-09-15
+
+### Added
+
+- Tab bar line with the tightest Claude Code and Codex plan window: percent used and time to reset.
+- Popup with every window (5h, weekly, per-model weekly), usage bars, reset times, and a detail/compact toggle.
+- Refresh when an agent turn ends (`pane.agent_status_changed`, at most every 2 minutes), plus a 5-minute poll. Manual refresh with `r` in the popup or the `refresh` action.
+- Setup popup that prints the config snippet and copies it to the clipboard. The tab bar runs a shim in the plugin config dir, rewritten on every herdr start, so config.toml never points at herdr's internal install path.
+- English and Korean UI (follows the macOS UI language or `LANG`), and optional Nerd Font brand icons.
+- Shared cache with a fetch lock, `Retry-After` backoff on 429, and last good readings kept on failure.
+- Demo mode (`PLAN_METER_DEMO=1`) and tests that run without credentials or network.

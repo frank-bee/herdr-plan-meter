@@ -1,0 +1,51 @@
+id = "junseo99.plan-meter"
+name = "Plan Meter"
+version = "0.1.0"
+min_herdr_version = "0.9.0"  # popup panes + tab_bar_right command entries; the version it is tested on
+description = "Claude Code and Codex plan usage — 5h and weekly limits with reset countdowns — in the tab bar, with a detail popup"
+platforms = ["linux", "macos"]
+
+# The tab bar line itself is a `ui.tab_bar_right` command entry in the user's config.toml
+# (a manifest cannot declare tab bar entries). That entry runs <plugin config dir>/tab-bar.sh,
+# a one-line shim this plugin keeps pointed at its current install: the `setup` pane writes it
+# and prints the snippet, and the startup hook rewrites it on every herdr start.
+
+[[startup]]
+command = ["python3", "meter.py", "shim"]
+
+# Usage only moves while an agent works, so refresh when a turn ends (at most every 2 minutes).
+# The tab bar still polls every 5 minutes for resets and usage from other machines.
+[[events]]
+on = "pane.agent_status_changed"
+command = ["python3", "meter.py", "event"]
+
+[[panes]]
+id = "panel"
+title = "Plan Meter"
+placement = "popup"
+width = 64
+height = 16
+command = ["python3", "meter.py", "panel"]
+
+[[panes]]
+id = "setup"
+title = "Plan Meter setup"
+placement = "popup"
+width = "90%"
+height = 18
+command = ["python3", "meter.py", "setup"]
+
+[[actions]]
+id = "open"
+title = "Show plan usage"
+command = ["python3", "meter.py", "open"]
+
+[[actions]]
+id = "setup"
+title = "Show the tab bar config snippet"
+command = ["python3", "meter.py", "open", "setup"]
+
+[[actions]]
+id = "refresh"
+title = "Refresh plan usage now"
+command = ["python3", "meter.py", "refresh"]
