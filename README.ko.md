@@ -10,11 +10,11 @@
 
 [English](README.md) · **한국어**
 
-<img src="assets/popup.png" width="509" alt="Plan Meter 팝업: Claude Max 5x 5시간 42%·주간 67%·주간 Opus 83%, Codex Pro 12%·31%, 한도마다 막대와 초기화 시각">
+<img src="assets/popup.png" width="509" alt="Plan Meter 팝업: Claude Max 20x 5시간 48%·주간 30%·주간 Fable 32%, Codex Plus 13%·6%, 한도마다 막대와 초기화 시각">
 <br>
-<img src="assets/tab-bar.png" width="338" alt="탭 바: Claude 83% 사용·3d 9h 후 초기화, Codex 31% 사용·4d 4h 후 초기화">
+<img src="assets/tab-bar.png" width="352" alt="탭 바: Claude 48% 사용·2h 25m 후 초기화, Codex 13% 사용·2h 57m 후 초기화">
 
-<sub>데모 데이터(<code>PLAN_METER_DEMO=1</code>), 브랜드 아이콘 켬. UI는 한국어로도 나옵니다.</sub>
+<sub>실제 계정(Claude Max 20x · ChatGPT Plus)의 사용량, 브랜드 아이콘 켬. UI는 한국어로도 나옵니다.</sub>
 
 </div>
 
@@ -142,7 +142,7 @@ herdr plugin uninstall junseo99.plan-meter
 PLAN_METER_DEMO=1 python3 meter.py panel
 ```
 
-데모 모드는 인증 정보를 읽거나 네트워크에 접속하지 않고 샘플 데이터를 그립니다. 위 스크린샷도 데모 모드입니다.
+데모 모드는 인증 정보를 읽거나 네트워크에 접속하지 않고 샘플 데이터를 그립니다.
 
 ## 개발
 

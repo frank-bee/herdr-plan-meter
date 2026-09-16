@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here. The project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- README screenshots show real usage instead of demo data.
+- Demo mode's per-model weekly window is Fable, the one Claude's usage endpoint reports, instead of an Opus window that does not exist.
+
 ## [0.1.0] - 2026-09-15
 
 ### Added

@@ -10,11 +10,11 @@ The limit you are closest to sits in the tab bar. One key opens every window.
 
 **English** · [한국어](README.ko.md)
 
-<img src="assets/popup.png" width="509" alt="Plan Meter popup: Claude Max 5x at 42% of the 5-hour window, 67% weekly and 83% weekly Opus; Codex Pro at 12% and 31%, each with a bar and reset time">
+<img src="assets/popup.png" width="509" alt="Plan Meter popup: Claude Max 20x at 48% of the 5-hour window, 30% weekly and 32% weekly Fable; Codex Plus at 13% and 6%, each with a bar and reset time">
 <br>
-<img src="assets/tab-bar.png" width="338" alt="Tab bar: Claude 83% used, resets in 3d 9h; Codex 31% used, resets in 4d 4h">
+<img src="assets/tab-bar.png" width="352" alt="Tab bar: Claude 48% used, resets in 2h 25m; Codex 13% used, resets in 2h 57m">
 
-<sub>Demo data (<code>PLAN_METER_DEMO=1</code>), brand icons on.</sub>
+<sub>Real usage from a Claude Max 20x and a ChatGPT Plus account, brand icons on.</sub>
 
 </div>
 
@@ -142,7 +142,7 @@ After uninstalling, remove the snippet from `config.toml` and delete `~/.cache/h
 PLAN_METER_DEMO=1 python3 meter.py panel
 ```
 
-Demo mode renders sample data without reading credentials or touching the network. The screenshots above use it.
+Demo mode renders sample data without reading credentials or touching the network.
 
 ## Development
 

@@ -310,7 +310,7 @@ def demo_data(now):
         "claude": {"plan": "Max 5x", "fetched_at": now - 20, "windows": [
             {"kind": "session", "used": 42, "resets_at": now + 2 * h + 13 * 60},
             {"kind": "weekly", "used": 67, "resets_at": now + 3 * d + 10 * h},
-            {"kind": "weekly", "model": "Opus", "used": 83, "resets_at": now + 3 * d + 10 * h}]},
+            {"kind": "weekly", "model": "Fable", "used": 83, "resets_at": now + 3 * d + 10 * h}]},
         "codex": {"plan": "Pro", "fetched_at": now - 20, "windows": [
             {"kind": "session", "used": 12, "resets_at": now + 4 * h + 26 * 60},
             {"kind": "weekly", "used": 31, "resets_at": now + 4 * d + 5 * h}]},
